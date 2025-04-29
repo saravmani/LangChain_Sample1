@@ -1,0 +1,93 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+tmp/
+.cache/
+.Python
+llm_configlist.json
+env/
+venv/
+
+ENV/
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+sdist/
+wheels/
+pip-wheel-metadata/
+*.whl
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written to the dist folder, but if we use --onedir mode, this will not happen
+#  https://pyinstaller.readthedocs.io/en/stable/usage.html
+build/
+dist/
+__pycache__/
+*.spec
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+.env
+.venv
+env.bak
+venv.bak
+
+# mypy cache
+.mypy_cache/
+
+# pytest cache
+.pytest_cache/
+
+# Coverage data
+.coverage
+coverage.xml
+*.lcov
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+__pycache__/
+media/
+static/
+.sqlite3
+*.sqlite3-journal
+instance/
+
+# Flask stuff:
+instance/
+logs/
+*.log
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# Temp files
+*~
+*.swp
+*.bak
+*.tmp
+*.log
+*.DS_Store # MacOS
+.vscode/ #VS Code
+.idea/ #IntelliJ IDEA

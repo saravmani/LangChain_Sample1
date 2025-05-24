@@ -40,11 +40,31 @@ if __name__ == "__main__":
     )
     all_splits = text_splitter.split_documents(docs) 
     vector_store = Chroma(
-    collection_name="example_collection",
-    embedding_function=embeddings,
-    persist_directory="./chroma_langchain_db"
+        collection_name="example_collection",
+        embedding_function=embeddings,
+        persist_directory="./chroma_langchain_db"
     )
     ids = vector_store.add_documents(documents=all_splits)
     results = vector_store.similarity_search_with_score("User Update API")
     print(results[0]) 
  
+
+
+
+from typing import List
+
+from langchain_core.documents import Document
+from langchain_core.runnables import chain
+
+
+@chain
+def retriever(query: str) -> List[Document]:
+    return vector_store.similarity_search(query, k=1)
+
+
+retriever.batch(
+    [
+        "How many distribution centers does Nike have in the US?",
+        "When was Nike incorporated?",
+    ],
+)

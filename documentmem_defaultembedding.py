@@ -59,10 +59,7 @@ if __name__ == "__main__":
     
     # 5. Search example
     query = "User Update API"
-    results = collection.query(
-        query_texts=[query],
-        n_results=3
-    )
+    results = collection.query( query_texts=[query], n_results=3 )
  
     for i, (doc, meta, dist) in enumerate(zip(results["documents"][0], results["metadatas"][0], results["distances"][0])):
         print(f"\nResult {i+1}:")

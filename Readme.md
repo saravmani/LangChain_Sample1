@@ -8,3 +8,4 @@ dotenv
 langchain_huggingface
 langchain-community
 pypdf
+langgraph
